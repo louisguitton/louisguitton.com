@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Where to find more about me</h1>
+
+    {% if social_links %}
+        <ul>
+        {% for network in social_links %}
+            <li>
+                <a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }}"></i></a>
+            </li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}

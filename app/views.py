@@ -7,21 +7,46 @@ from .forms import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
-    user = {'nickname': 'Miguel'}  # fake user
-    posts = [  # fake array of posts
+    projects = [  # fake array of projects
         {
-            'author': {'nickname': 'John'},
-            'body': 'Beautiful day in Portland!'
+            'title': "2055 = 2048 + 007",
+            'description': "The 2048 game meets James Bond!",
+            'nickname': '2055'
         },
         {
-            'author': {'nickname': 'Susan'},
-            'body': 'The Avengers movie was so cool!'
+            'title': "Football Betting",
+            'description': "A dashboard of the SoFootLigue Data.",
+            'nickname': 'sofoot'
         }
     ]
-    return render_template("index.html",
-                           title='Home',
-                           user=user,
-                           posts=posts)
+    return render_template(
+        "index.html",
+        title='Home',
+        projects=projects
+    )
+
+
+@app.route('/contact')
+def contact():
+    social_links = [
+        {
+            "title": "linkedin",
+            "url": "https://fr.linkedin.com/in/louisguitton"
+        },
+        {
+            "title": "twitter",
+            "url": "https://twitter.com/louis_guitton"
+        },
+        {
+            "title": "github",
+            "url": "https://github.com/louisguitton"
+        }
+    ]
+    return render_template(
+        "contact.html",
+        title='Contact',
+        social_links=social_links
+    )
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -35,3 +60,11 @@ def login():
                            title='Sign In',
                            form=form)
 
+
+@app.route('/projects/<nickname>')
+def projects(nickname):
+    return render_template(
+        'project.html',
+        title=nickname,
+        nickname=nickname
+    )
