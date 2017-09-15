@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Bokeh Plot</title>
+
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />
+
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
+<script type="text/javascript">
+    Bokeh.set_log_level("info");
+</script>
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+    </head>
+    <body>
+
+        <div class="bk-root">
+            <div class="bk-plotdiv" id="f44c8dc4-7880-415c-bc33-5c1297ae8233"></div>
+        </div>
+
+        <script type="text/javascript">
+            (function() {
+          var fn = function() {
+            Bokeh.safely(function() {
+              var docs_json = {"88ba83a0-b61d-4c00-abac-d54740eb5fb2":{"roots":{"references":[{"attributes":{"callback":null,"names":["teams"],"plot":{"id":"eec8495e-93db-41e3-8348-c2323f71d335","subtype":"Figure","type":"Plot"},"tooltips":[["Points","@x"],["Bet Safety","@y"],["Team","@team"],["Match","@game"]]},"id":"e96804c0-5503-4ede-98c5-79ed2cfd9980","type":"HoverTool"},{"attributes":{},"id":"40def255-2cf9-4b65-b0dc-791d1226d95a","type":"LogScale"},{"attributes":{"callback":null},"id":"c0c46a86-bff5-4fc0-898d-fbd00f35b2ba","type":"DataRange1d"},{"attributes":{"callback":null,"column_names":["y","team","game","x"],"data":{"game":["Manchester City 1 - 1 Everton","Malaga 0 - 1 SD Eibar","Levante 1 - 0 Villarreal","Atiker Konyaspor 1922 3 - 0 Genclerbirligi","CD Feirense 2 - 1 Pa\u00e7os Ferreira","Chateauroux 1 - 0 Nimes","Manchester City 1 - 1 Everton","CD Feirense 2 - 1 Pa\u00e7os Ferreira","Chateauroux 1 - 0 Nimes","Atiker Konyaspor 1922 3 - 0 Genclerbirligi","Levante 1 - 0 Villarreal","Malaga 0 - 1 SD Eibar"],"team":["Everton","SD Eibar","Levante","Atiker Konyaspor 1922","CD Feirense","Chateauroux","Manchester City","Pa\u00e7os Ferreira","Nimes","Genclerbirligi","Villarreal","Malaga"],"x":[58,41,39,38,36,33,12,5,0,0,0,0],"y":{"__ndarray__":"S5/0SZ/03T91lPQ7hUS4P836rJaguL8/Iyz3NMJyF0ABnTbQaQP9PwqR0iNL4uk/R/f8VwgOAUDIrcs74EjhPzNYoTNYofM/WE9hPYX1xD8AAAAAAAAgQHZiJ3ZipyRA","dtype":"float64","shape":[12]}}},"id":"e6423757-d21c-45ae-ba5e-3e73ed4ff3d6","type":"ColumnDataSource"},{"attributes":{},"id":"424dfeb1-307c-46f3-88e6-25d9df7de561","type":"ToolEvents"},{"attributes":{"ticker":null},"id":"71ca1801-924b-4ca3-8239-22d7851afb07","type":"LogTickFormatter"},{"attributes":{"plot":null,"text":"/home/louis/Documents/Projects/sofoot/data/sfl_data_20170822.csv"},"id":"2a84d48e-bcd1-4721-b283-ea283938bd88","type":"Title"},{"attributes":{"below":[{"id":"87eed447-baa4-428f-9649-975792d247e8","type":"LinearAxis"}],"left":[{"id":"10f09a40-38b3-4ffc-8f21-5f86ec6eafb5","type":"LogAxis"}],"renderers":[{"id":"87eed447-baa4-428f-9649-975792d247e8","type":"LinearAxis"},{"id":"78faf7be-b663-4e10-8f49-42f136c64c25","type":"Grid"},{"id":"10f09a40-38b3-4ffc-8f21-5f86ec6eafb5","type":"LogAxis"},{"id":"f27a7bde-a198-42d0-a208-6c915808d485","type":"Grid"},{"id":"65ac25d5-6da1-4553-90f2-b18a54bd1168","type":"GlyphRenderer"}],"title":{"id":"2a84d48e-bcd1-4721-b283-ea283938bd88","type":"Title"},"tool_events":{"id":"424dfeb1-307c-46f3-88e6-25d9df7de561","type":"ToolEvents"},"toolbar":{"id":"173f6673-9d40-4ba8-8069-22db7b7020d1","type":"Toolbar"},"x_range":{"id":"c79246f5-59ef-44ca-ac04-140db3948690","type":"DataRange1d"},"x_scale":{"id":"36da8435-c29e-4958-bb02-7f51042d8368","type":"LinearScale"},"y_range":{"id":"c0c46a86-bff5-4fc0-898d-fbd00f35b2ba","type":"DataRange1d"},"y_scale":{"id":"40def255-2cf9-4b65-b0dc-791d1226d95a","type":"LogScale"}},"id":"eec8495e-93db-41e3-8348-c2323f71d335","subtype":"Figure","type":"Plot"},{"attributes":{"axis_label":"Points SFL","formatter":{"id":"558474d7-4705-4943-82fd-0be0609081fd","type":"BasicTickFormatter"},"plot":{"id":"eec8495e-93db-41e3-8348-c2323f71d335","subtype":"Figure","type":"Plot"},"ticker":{"id":"29f6064d-b326-4e3e-8b29-9fc6a6022f5a","type":"BasicTicker"}},"id":"87eed447-baa4-428f-9649-975792d247e8","type":"LinearAxis"},{"attributes":{"plot":{"id":"eec8495e-93db-41e3-8348-c2323f71d335","subtype":"Figure","type":"Plot"},"ticker":{"id":"29f6064d-b326-4e3e-8b29-9fc6a6022f5a","type":"BasicTicker"}},"id":"78faf7be-b663-4e10-8f49-42f136c64c25","type":"Grid"},{"attributes":{"data_source":{"id":"e6423757-d21c-45ae-ba5e-3e73ed4ff3d6","type":"ColumnDataSource"},"glyph":{"id":"aee2b138-9fbc-418c-8855-5067ba0cbcce","type":"Circle"},"hover_glyph":null,"muted_glyph":null,"name":"teams","nonselection_glyph":{"id":"cae40264-3c32-47db-855d-58b6bec47122","type":"Circle"},"selection_glyph":null},"id":"65ac25d5-6da1-4553-90f2-b18a54bd1168","type":"GlyphRenderer"},{"attributes":{"callback":null},"id":"c79246f5-59ef-44ca-ac04-140db3948690","type":"DataRange1d"},{"attributes":{"num_minor_ticks":10},"id":"64214412-181f-4c3f-96b3-1f1ba7fed8c3","type":"LogTicker"},{"attributes":{},"id":"36da8435-c29e-4958-bb02-7f51042d8368","type":"LinearScale"},{"attributes":{"active_drag":"auto","active_inspect":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"e96804c0-5503-4ede-98c5-79ed2cfd9980","type":"HoverTool"}]},"id":"173f6673-9d40-4ba8-8069-22db7b7020d1","type":"Toolbar"},{"attributes":{},"id":"29f6064d-b326-4e3e-8b29-9fc6a6022f5a","type":"BasicTicker"},{"attributes":{"dimension":1,"plot":{"id":"eec8495e-93db-41e3-8348-c2323f71d335","subtype":"Figure","type":"Plot"},"ticker":{"id":"64214412-181f-4c3f-96b3-1f1ba7fed8c3","type":"LogTicker"}},"id":"f27a7bde-a198-42d0-a208-6c915808d485","type":"Grid"},{"attributes":{"fill_alpha":{"value":0.8},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.8},"line_color":{"value":"#1f77b4"},"radius":{"units":"data","value":1},"x":{"field":"x"},"y":{"field":"y"}},"id":"aee2b138-9fbc-418c-8855-5067ba0cbcce","type":"Circle"},{"attributes":{"axis_label":"Bet Safety","formatter":{"id":"71ca1801-924b-4ca3-8239-22d7851afb07","type":"LogTickFormatter"},"plot":{"id":"eec8495e-93db-41e3-8348-c2323f71d335","subtype":"Figure","type":"Plot"},"ticker":{"id":"64214412-181f-4c3f-96b3-1f1ba7fed8c3","type":"LogTicker"}},"id":"10f09a40-38b3-4ffc-8f21-5f86ec6eafb5","type":"LogAxis"},{"attributes":{},"id":"558474d7-4705-4943-82fd-0be0609081fd","type":"BasicTickFormatter"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"radius":{"units":"data","value":1},"x":{"field":"x"},"y":{"field":"y"}},"id":"cae40264-3c32-47db-855d-58b6bec47122","type":"Circle"}],"root_ids":["eec8495e-93db-41e3-8348-c2323f71d335"]},"title":"Bokeh Application","version":"0.12.6"}};
+              var render_items = [{"docid":"88ba83a0-b61d-4c00-abac-d54740eb5fb2","elementid":"f44c8dc4-7880-415c-bc33-5c1297ae8233","modelid":"eec8495e-93db-41e3-8348-c2323f71d335"}];
+
+              Bokeh.embed.embed_items(docs_json, render_items);
+            });
+          };
+          if (document.readyState != "loading") fn();
+          else document.addEventListener("DOMContentLoaded", fn);
+        })();
+
+        </script>
+    </body>
+</html>
