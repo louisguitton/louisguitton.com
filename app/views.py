@@ -11,12 +11,14 @@ def index():
         {
             'title': "2055 = 2048 + 007",
             'description': "The 2048 game meets James Bond!",
-            'nickname': '2055'
+            'nickname': '2055',
+            'template': "2055.html"
         },
         {
             'title': "Football Betting",
             'description': "A dashboard of the SoFootLigue Data.",
-            'nickname': 'sofoot'
+            'nickname': 'sofoot',
+            'template': "sofoot.html"
         }
     ]
     return render_template(
@@ -63,8 +65,25 @@ def login():
 
 @app.route('/projects/<nickname>')
 def projects(nickname):
+
+    projects = [  # fake array of projects
+        {
+            'title': "2055 = 2048 + 007",
+            'description': "The 2048 game meets James Bond!",
+            'nickname': '2055',
+            'template': "2055.html"
+        },
+        {
+            'title': "Football Betting",
+            'description': "A dashboard of the SoFootLigue Data.",
+            'nickname': 'sofoot',
+            'template': "sofoot.html"
+        }
+    ]
+    selected_project = [p for p in projects if p['nickname'] == nickname][0]
+
     return render_template(
         'project.html',
         title=nickname,
-        nickname=nickname
+        project=selected_project
     )
