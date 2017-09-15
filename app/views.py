@@ -7,6 +7,7 @@ from .forms import LoginForm
 @app.route('/')
 @app.route('/index')
 def index():
+
     projects = [  # fake array of projects
         {
             'title': "2055 = 2048 + 007",
@@ -19,8 +20,15 @@ def index():
             'description': "A dashboard of the SoFootLigue Data.",
             'nickname': 'sofoot',
             'template': "sofoot.html"
+        },
+        {
+            'title': "songGIFy",
+            'description': "An automatic GIF video clip for the song of my band.",
+            'nickname': 'songgify',
+            'template': "songgify.html"
         }
     ]
+
     return render_template(
         "index.html",
         title='Home',
@@ -78,6 +86,12 @@ def projects(nickname):
             'description': "A dashboard of the SoFootLigue Data.",
             'nickname': 'sofoot',
             'template': "sofoot.html"
+        },
+        {
+            'title': "songGIFy",
+            'description': "An automatic GIF video clip for the song of my band.",
+            'nickname': 'songgify',
+            'template': "songgify.html"
         }
     ]
     selected_project = [p for p in projects if p['nickname'] == nickname][0]

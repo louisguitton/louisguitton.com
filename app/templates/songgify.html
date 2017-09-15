@@ -1,0 +1,30 @@
+  <script src="../static/js/songGIFy/main.js" type="text/javascript"></script>
+  <script src="../static/js/songGIFy/phrases.js" type="text/javascript"></script>
+
+  <style media="screen">
+    #wrapper {
+      width: 70%;     /* specify a width! */
+      margin: 0 auto; /* center */
+    }
+    #lyrics {
+      font-size: larger
+    }
+  </style>
+
+  <div id="wrapper">
+    <h1>Smilin' - Las Conejitas</h1>
+      <h4>
+        Play the music and the video will start.<br>
+        Reload, Watch it again, it won't be the same!
+      </h4>
+    <div class="row">
+  <div class="col-md-6">
+    <br>
+    <audio id="smilin" controls onplay="smilin_onplay()"><source src="../static/img/songGIFy/smilin.mp3" type="audio/mp3"></audio>
+    <br>
+  </div>
+  <div class="col-md-6"><p id="lyrics"></p></div>
+</div>
+
+    <iframe id="gif" src="../static/img/songGIFy/lapin.jpg" width="700" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </div>
