@@ -1,29 +1,24 @@
+<!DOCTYPE html>
 <html>
-  <head>
-      <link rel="shortcut icon" href="/static/favicon.ico" />
 
-      {% if title %}
-      <title>{{ title }} - louisguitton</title>
-      {% else %}
-      <title>Welcome to louisguitton</title>
-      {% endif %}
+    {% include 'head.html' %}
 
-      <link rel="stylesheet" href="/static/font-awesome-4.7.0/css/font-awesome.min.css">
-  </head>
-  <body>
-    <div>Louis Guitton: <a href="/index">Home</a> <a href="/contact">Contact</a></div>
-    <hr>
+    <body>
+        {% include 'nav.html' %}
 
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <ul>
-        {% for message in messages %}
-            <li>{{ message }} </li>
-        {% endfor %}
-        </ul>
-      {% endif %}
-    {% endwith %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                {% for message in messages %}
+                    <li>{{ message }} </li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
 
-    {% block content %}{% endblock %}
-  </body>
+        {% block content %}{% endblock %}
+
+        {% include 'footer.html' %}
+        {% include 'js.html' %}
+    </body>
 </html>
