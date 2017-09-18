@@ -1,7 +1,7 @@
 from locale import format
 
 from flask import render_template, flash, redirect, url_for, session, request, g
-from flask_login import login_user, logout_user, current_user
+from flask_login import login_user, logout_user, current_user, login_required
 from flask_oauthlib.client import OAuthException
 
 from app import app, lm, oauth
@@ -167,6 +167,8 @@ def projects(nickname):
     )
 
 
-
-
+@app.route('/edit')
+@login_required
+def edit_projects():
+    return 'This is the place where I edit my projects.'
 

@@ -1,0 +1,24 @@
+{% import 'admin/layout.html' as layout with context -%}
+{% extends 'admin/base.html' %}
+
+{% block head_meta %}
+    {% include 'head_meta.html' %}
+{% endblock %}
+
+{% block head_css %}
+    {{ super() }}
+    {% include 'head_css.html' %}
+{% endblock %}
+
+{% block head %}
+    <link rel="shortcut icon" href="../static/img/favicon.ico" />
+{% endblock %}
+
+{% block page_body %}
+  {% include 'nav.html' %}
+
+  {{ super() }}
+
+  {% include 'footer.html' %}
+  {% include 'js.html' %}
+{% endblock %}

@@ -3,3 +3,5 @@ flask-wtf
 peewee
 flask-login
 flask-oauthlib
+flask-admin
+wtf-peewee
