@@ -1,4 +1,5 @@
 from peewee import Model, BigIntegerField, CharField
+from flask_login import UserMixin
 
 from app import db
 
@@ -8,8 +9,7 @@ class BaseModel(Model):
         database = db
 
 
-class User(BaseModel):
-    id = BigIntegerField(primary_key=True)
-    nickname = CharField()
-    email = CharField()
+class User(UserMixin, BaseModel):
+    nickname = CharField(null=False)
+    email = CharField(null=True)
 
