@@ -14,7 +14,7 @@
     <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="ignoredPackages">
         <value>
-          <list size="23">
+          <list size="28">
             <item index="0" class="java.lang.String" itemvalue="protobuf" />
             <item index="1" class="java.lang.String" itemvalue="datetime" />
             <item index="2" class="java.lang.String" itemvalue="python-Levenshtein" />
@@ -38,6 +38,11 @@
             <item index="20" class="java.lang.String" itemvalue="Keras" />
             <item index="21" class="java.lang.String" itemvalue="urllib3" />
             <item index="22" class="java.lang.String" itemvalue="peewee" />
+            <item index="23" class="java.lang.String" itemvalue="dist-keras" />
+            <item index="24" class="java.lang.String" itemvalue="requests" />
+            <item index="25" class="java.lang.String" itemvalue="dask" />
+            <item index="26" class="java.lang.String" itemvalue="gunicorn" />
+            <item index="27" class="java.lang.String" itemvalue="Flask" />
           </list>
         </value>
       </option>
