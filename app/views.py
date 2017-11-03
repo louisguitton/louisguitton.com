@@ -1,5 +1,3 @@
-from locale import format
-
 from flask import render_template, flash, redirect, url_for, session, request, g
 from flask_login import login_user, logout_user, current_user, login_required
 from flask_oauthlib.client import OAuthException
@@ -93,6 +91,7 @@ def oauth_authorized():
 
     flash('You were signed in as %s' % user.nickname)
     login_user(user)
+
     return redirect(next_url)
 
 
@@ -171,4 +170,3 @@ def projects(nickname):
 @login_required
 def edit_projects():
     return 'This is the place where I edit my projects.'
-
