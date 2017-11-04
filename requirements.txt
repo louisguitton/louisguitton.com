@@ -1,3 +1,4 @@
+uwsgi
 flask
 flask-wtf
 peewee
