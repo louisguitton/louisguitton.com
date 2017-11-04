@@ -5,3 +5,5 @@ sudo systemctl enable site
 
 cp ~/site/nginx_config /etc/nginx/sites-available/site
 sudo ln -s /etc/nginx/sites-available/site /etc/nginx/sites-enabled
+
+sudo systemctl restart nginx
