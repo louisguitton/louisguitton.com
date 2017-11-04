@@ -1,0 +1,9 @@
+server {
+    listen 80;
+    server_name 46.101.245.28;
+
+    location / {
+        include uwsgi_params;
+        uwsgi_pass unix:/home/louis/site/site.sock;
+    }
+}
