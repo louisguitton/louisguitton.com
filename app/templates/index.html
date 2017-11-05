@@ -1,25 +1,15 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>Hi, I'm Louis!</h1>
+    <h1>Hi, I'm Louis.</h1>
 
     <br>
     <p>
-        I'm a Goof. <br>
-        I'm 23 and I live in Berlin.
-        I'm passionate about learning, building my ideas,
-        bass guitar, and football.
+        I'm an engineer working as a Data Scientist in Berlin. <br>
+        Taking a deep dive into the e-sports thriving industry at Dojo Madness. <br>
+        I'm passionate about learning, building products and prototyping my ideas.
     </p>
 
-    {% if projects %}
-        <ul>
-        {% for project in projects %}
-            <li>
-                <a href="{{url_for('projects', nickname=project.nickname)}}">{{ project.title }}</a> :
-                {{ project.description}}
-            </li>
-        {% endfor %}
-        </ul>
-    {% endif %}
+    <p>For more info & contact details, <a href="{{ url_for('about') }}">click here</a>.</p>
 
 {% endblock %}

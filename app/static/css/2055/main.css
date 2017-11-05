@@ -125,7 +125,6 @@ strong.important {
   text-transform: uppercase; }
 
 .container {
-  width: 500px;
   margin: 0 auto; }
 
 @-webkit-keyframes fade-in {
