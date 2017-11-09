@@ -6,6 +6,7 @@ html
 body
 {
 	font: 24px/33px 'EB Garamond', serif;
+    text-align:center;
 	color: black;
 	min-height: 100%;
 	font-smoothing: antialiased;
@@ -15,15 +16,103 @@ body
 	font-feature-settings:"lnum" 1;
 }
 
+html,body{
+	margin:0;
+	padding:0
+}
+
 h1,
 h2,
 h3,
 .menu,
 time,
 h5,
-h6
-{
+h6,
+#navigation,
+#extra{
 	font: 22px/30px "pt sans", sans-serif;
-	color: dodgerblue;
+	color: #513F3A;
 	text-rendering: optimizeLegibility;
+}
+
+p{
+    margin: 1% 0;
+}
+
+a{
+    padding: 2%;
+    text-decoration: none;
+    color: #C64474;
+}
+
+a:hover{
+    color: #513F3A;
+}
+
+div.container{
+    text-align: left;
+    width: 80%;
+    margin:0 auto
+}
+
+div#header{
+    background-color: #E46F4E;
+    height: 100px;
+    margin: 5% 0;
+}
+
+div#header h1{
+    height: 80px;
+    line-height: 80px;
+    margin: 0;
+    padding-left: 5%;
+}
+
+div#content{
+    float: right;
+    width: 60%;
+    color: white;
+    margin: 5% 0;
+}
+
+div#content p{
+    line-height: 1.4;
+    color: black;
+}
+
+div#navigation{
+    background: #FBF9F9;
+    margin: 5% 0;
+    width: 30%;
+    float: left;
+}
+
+div#navigation ul{
+    margin: 15px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+div#navigation li{
+    margin-bottom: 2%;
+}
+
+div#extra{
+    background: #FBF9F9;
+    margin: 5% 0;
+
+    float: left;
+    clear: left;
+    width: 30%;
+}
+
+div#footer{
+    background: #FBF9F9;
+    clear: both;
+    width: 100%;
+}
+
+div#footer p{
+    margin: 0;
+    padding: 5px 10px;
 }

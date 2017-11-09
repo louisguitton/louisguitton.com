@@ -5,26 +5,41 @@
 
 <body>
 <div class="container">
-    <div class="row">
-        <div class="sidebar col-md-3">
-            {% include 'nav.html' %}
-        </div>
-        <div class="col-md-9 page">
+
+    <div id="header">
+        <h1>Louis. Guitton</h1>
+    </div>
+
+
+    <div id="wrapper">
+        <div id="content">
             {% with messages = get_flashed_messages() %}
             {% if messages %}
             <ul>
                 {% for message in messages %}
-                <li>{{ message }} </li>
+                <li><div class="alert alert-danger" role="alert">{{ message }}</div></li>
                 {% endfor %}
             </ul>
             {% endif %}
             {% endwith %}
 
             {% block content %}{% endblock %}
-
-            {% include 'footer.html' %}
-            {% include 'js.html' %}
         </div>
+    </div>
+
+
+    <div id="navigation">
+        {% include 'nav.html' %}
+    </div>
+
+    <div id="extra">
+        <p><strong>More stuff here.</strong></p>
+        <p>sit malesuada lacus pellus parturpiscing.</p>
+    </div>
+
+    <div id="footer">
+        {% include 'footer.html' %}
+        {% include 'js.html' %}
     </div>
 </div>
 
