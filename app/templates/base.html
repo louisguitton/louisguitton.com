@@ -32,10 +32,13 @@
         {% include 'nav.html' %}
     </div>
 
+    {% if extra %}
     <div id="extra">
-        <p><strong>More stuff here.</strong></p>
-        <p>sit malesuada lacus pellus parturpiscing.</p>
+        <p><strong>{{ extra.title }}</strong></p>
+        <p>{{ extra.body }}</p>
     </div>
+    {% endif %}
+
 
     <div id="footer">
         {% include 'footer.html' %}

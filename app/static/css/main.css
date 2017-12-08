@@ -40,7 +40,6 @@ p{
 }
 
 a{
-    padding: 2%;
     text-decoration: none;
     color: #C64474;
 }
@@ -58,7 +57,7 @@ div.container{
 div#header{
     background-color: #E46F4E;
     height: 100px;
-    margin: 5% 0;
+    margin: 2.5% 0;
 }
 
 div#header h1{
@@ -72,7 +71,7 @@ div#content{
     float: right;
     width: 60%;
     color: white;
-    margin: 5% 0;
+    margin: 2.5% 0;
 }
 
 div#content p{
@@ -82,7 +81,7 @@ div#content p{
 
 div#navigation{
     background: #FBF9F9;
-    margin: 5% 0;
+    margin: 2.5% 0;
     width: 30%;
     float: left;
 }
@@ -99,8 +98,8 @@ div#navigation li{
 
 div#extra{
     background: #FBF9F9;
-    margin: 5% 0;
-
+    margin: 2.5% 0;
+    padding: 2%;
     float: left;
     clear: left;
     width: 30%;

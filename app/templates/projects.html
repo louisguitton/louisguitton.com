@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 
-{% block content %}
-    <p>
-        Here is a list of some of my projects:
-        {% if projects %}
-            <ul>
-                {% for project in projects %}
-                    <li>
-                        <a href="{{ url_for('projects', nickname=project.nickname) }}">{{ project.title }}</a> :
-                        {{ project.description}}
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </p>
+    {% block content %}
+    <h1>Here is a list of some of my projects:</h1>
+
+    {% if projects %}
+    <ul class="list-group">
+        {% for project in projects %}
+        <li class="list-group-item">
+            <p>
+                <a href="{{ url_for('projects', nickname=project.nickname) }}">{{ project.title }}</a> :
+                {{ project.description}}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
 {% endblock %}
 
 

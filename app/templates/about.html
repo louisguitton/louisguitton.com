@@ -4,12 +4,15 @@
     <h1>Where to find more about me</h1>
 
     {% if social_links %}
-        <ul>
+        <ul class="list-group">
         {% for network in social_links %}
-            <li>
-                <a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }}"></i></a>
-            </li>
+            <a href="{{ network.url }}" target="_blank" class="list-group-item">
+                <i class="fa fa-{{ network.title }}"></i>
+            </a>
         {% endfor %}
+            <a class="list-group-item" href="https://stackoverflow.com/users/3823815/laguittemh" target="_blank">
+            <img src="https://stackoverflow.com/users/flair/3823815.png?theme=clean" width="208" height="58" alt="profile for laguittemh at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for laguittemh at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+            </a>
         </ul>
     {% endif %}
 {% endblock %}

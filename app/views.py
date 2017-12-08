@@ -1,15 +1,18 @@
 from flask import render_template, flash, redirect
 
 from app import app
-from .forms import LoginForm
 
 
 @app.route('/')
 @app.route('/index')
 def index():
+    extra = {
+        'title': 'Welcome'
+    }
     return render_template(
         "index.html",
         title='Home',
+        extra=extra
     )
 
 
@@ -29,10 +32,17 @@ def about():
             "url": "https://github.com/louisguitton"
         }
     ]
+
+    extra = {
+        "title": "Social Media",
+        "body": "All my accounts."
+    }
+
     return render_template(
         "about.html",
         title='About',
-        social_links=social_links
+        social_links=social_links,
+        extra=extra
     )
 
 
@@ -60,29 +70,23 @@ def projects(nickname=None):
         }
     ]
 
+    extra = {
+        'title': "My ideas",
+        'body': 'At least some of them'
+    }
     if nickname:
         selected_project = [p for p in projects if p['nickname'] == nickname][0]
 
         return render_template(
             'project.html',
             title=nickname,
-            project=selected_project
+            project=selected_project,
+            extra=extra
         )
     else:
         return render_template(
             'projects.html',
             title='Projects',
-            projects=projects
+            projects=projects,
+            extra=extra
         )
-
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    form = LoginForm()
-    if form.validate_on_submit():
-        flash('Login requested for OpenID="%s", remember_me=%s' %
-              (form.openid.data, str(form.remember_me.data)))
-        return redirect('/index')
-    return render_template('login.html',
-                           title='Sign In',
-                           form=form)
