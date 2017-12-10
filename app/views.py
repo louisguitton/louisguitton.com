@@ -7,7 +7,7 @@ from app import app
 @app.route('/index')
 def index():
     extra = {
-        'title': 'Welcome'
+        'title': 'Welcome!'
     }
     return render_template(
         "index.html",
@@ -35,7 +35,7 @@ def about():
 
     extra = {
         "title": "Social Media",
-        "body": "All my accounts."
+        "body": "All my accounts"
     }
 
     return render_template(
