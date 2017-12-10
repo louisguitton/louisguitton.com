@@ -115,3 +115,15 @@ div#footer p{
     margin: 0;
     padding: 5px 10px;
 }
+
+.btn-primary {
+    color: #fff;
+    background-color: #C64474;
+    border-color: #C64474;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: #513F3A;
+    border-color: #513F3A; /*set the color you want here*/
+}
