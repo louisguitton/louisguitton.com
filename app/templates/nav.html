@@ -1,15 +1,9 @@
 <nav class="navbar menu">
-    <div class="row">
-        <div class="col-xs-3 col-md-12">
-            <img src="/static/img/favicon.ico">
-        </div>
-        <div class="col-xs-9 col-md-12">
-            <div class="h4 text-center font-weight-bold navbar-header">
-                <a class="navbar-brand" href="{{ url_for('index') }}">Louis Guitton</a>
-            </div>
-        </div>
-    </div>
     <ul class="h5 nav-pills nav-stacked">
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+        </li>
+
         <li class="nav-item">
             <a class="nav-link" href="{{ url_for('about') }}">About</a>
         </li>
